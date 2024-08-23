@@ -3,8 +3,9 @@
 
 int top = -1;
 int n;
+int s[20];
 
-int push(int s[]){
+void push(){
 	int item;
 	if(top >= n-1){
 		printf("\nOverflow!\n");
@@ -16,10 +17,9 @@ int push(int s[]){
 		s[top] = item;
 		printf("Item has been inserted.");
 	}
-	return s;
 }
 
-int pop(int s[]){
+void pop(){
 	int item;
 	if(top == -1){
 		printf("\nUnderflow!\n");
@@ -29,10 +29,9 @@ int pop(int s[]){
 		top--;
 		printf("Item deleted from stack is %d.", item);
 	}
-	return s;
 }
 
-void display(int s[]){
+void display(){
 	if(top==-1){
 		printf("\nStack is empty!\n");
 	}
@@ -50,7 +49,6 @@ void main(){
 	char ch='y';
 	printf("Enter size of array: ");
 	scanf("%d", &n);
-	int s[n];
 	do{
 		printf("\n\n***MENU***");
 		printf("\n[1] Push to stack");
@@ -61,15 +59,15 @@ void main(){
 		scanf("%d", &opt);
 		switch(opt){
 			case 1:
-				s[n] = push(s);
+				push();
 				break;
 			
 			case 2:
-				s[n] = pop(s);
+				pop();
 				break;
 			
 			case 3:
-				display(s);
+				display();
 				break;
 			
 			case 0:
@@ -83,4 +81,3 @@ void main(){
 	printf("\nExiting...\n");
 }
 		
-	
