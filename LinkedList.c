@@ -178,7 +178,7 @@ void display(){
 int main(){
 	int ch;
 	while(1){
-		printf("\n\t\tMENU\n1)Insertion at beginning\n2)Inertion at end\n3)Insertion at any postion\n4)Deletion at Biginning\n5)Deletion at End\n6)Deletion At any position\n7)Display\n8)Exit\n");
+		printf("\n\t\tMENU\n1)Insertion at beginning\n2)Insertion at end\n3)Insertion at any postion\n4)Deletion at Beginning\n5)Deletion at End\n6)Deletion At any position\n7)Display\n8)Exit\n");
 		printf("Enter option: ");
 		scanf("%d",&ch);
 		switch(ch){
